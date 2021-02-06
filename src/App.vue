@@ -11,18 +11,12 @@
           <personal-information></personal-information>
         </tab-content>
 
-            <!-- RELATIONSHIP STATUS -->
-            <tab-content title="Relationship Status"
-                         icon="ti-heart">
-              <label for="gender">Relationship</label>
-              <input type="radio" id="single" name="relationship" value="single">
-              <label for="single">Single</label><br>
-              <input type="radio" id="married" name="relationship" value="married">
-              <label for="married">Married</label><br>
-              
-              <input type="radio" id="complicated" name="complicated" value="complicated">
-              <label for="complicated">Complicated</label><br>
-            </tab-content>
+        <!-- RELATIONSHIP STATUS -->
+        <tab-content 
+        title="Relationship Status"
+        icon="ti-heart">
+          <relationship-status></relationship-status>            
+        </tab-content>
             
             <!-- RESIDENTIAL DETAILS -->
             <tab-content title="Residential Details"
@@ -83,8 +77,12 @@
 
 <script>
 import PersonalInformation from './components/steps/PersonalInformation.vue'
+import RelationshipStatus from './components/steps/RelationshipStatus.vue'
 export default {
-  components: { PersonalInformation },
+  components: { 
+    PersonalInformation,
+    RelationshipStatus 
+    },
   name: 'App'
 }
 </script>
