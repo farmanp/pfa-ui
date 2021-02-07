@@ -11,70 +11,36 @@
           <personal-information></personal-information>
         </tab-content>
 
-            <!-- RELATIONSHIP STATUS -->
-            <tab-content title="Relationship Status"
-                         icon="ti-heart">
-              <label for="gender">Relationship</label>
-              <input type="radio" id="single" name="relationship" value="single">
-              <label for="single">Single</label><br>
-              <input type="radio" id="married" name="relationship" value="married">
-              <label for="married">Married</label><br>
-              
-              <input type="radio" id="complicated" name="complicated" value="complicated">
-              <label for="complicated">Complicated</label><br>
-            </tab-content>
+        <!-- RELATIONSHIP STATUS -->
+        <tab-content 
+        title="Relationship Status"
+        icon="ti-heart">
+          <relationship-status></relationship-status>            
+        </tab-content>
             
-            <!-- RESIDENTIAL DETAILS -->
-            <tab-content title="Residential Details"
-                         icon="ti-home">
-              <label for="streetAddress">Street Address</label>
-              <input type="text" name="streetAddress">
-              <label for="city">City</label>
-              <input type="text" name="city">
-              <label for="state">State</label>
-              <input type="text" name="state">
-              <label for="zipCode">Zip</label>
-              <input type="text" name="zip">
-            </tab-content>
+        <!-- RESIDENTIAL DETAILS -->
+        <tab-content title="Residential Details"
+         icon="ti-home">
+          <residential-details></residential-details>
+        </tab-content>
             
-            <!-- CHECKING DETAILS -->
-            <tab-content title="Checkings"
-                         icon="ti-money">
-              <label for="streetAddress">Street Address</label>
-              <input type="text" name="streetAddress">
-              <label for="city">City</label>
-              <input type="text" name="city">
-              <label for="state">State</label>
-              <input type="text" name="state">
-              <label for="zipCode">Zip</label>
-              <input type="text" name="zip">
-            </tab-content>
-            
-            <!-- SAVING DETAILS -->
-            <tab-content title="Savings"
-                         icon="ti-shield">
-              <label for="streetAddress">Street Address</label>
-              <input type="text" name="streetAddress">
-              <label for="city">City</label>
-              <input type="text" name="city">
-              <label for="state">State</label>
-              <input type="text" name="state">
-              <label for="zipCode">Zip</label>
-              <input type="text" name="zip">
-            </tab-content>
-            
-           <!-- RETIREMENT DETAILS -->
-            <tab-content title="Retirement"
-                         icon="ti-support">
-              <label for="streetAddress">Street Address</label>
-              <input type="text" name="streetAddress">
-              <label for="city">City</label>
-              <input type="text" name="city">
-              <label for="state">State</label>
-              <input type="text" name="state">
-              <label for="zipCode">Zip</label>
-              <input type="text" name="zip">
-            </tab-content>
+        <!-- CHECKING DETAILS -->
+        <tab-content title="Checkings"
+         icon="ti-money">
+        <checking-details></checking-details>
+        </tab-content>
+        
+        <!-- SAVING DETAILS -->
+        <tab-content title="Savings"
+         icon="ti-shield">
+          <savings-details></savings-details>
+        </tab-content>
+        
+        <!-- RETIREMENT DETAILS -->
+        <tab-content title="Retirement"
+         icon="ti-support">
+          <retirement-details></retirement-details>
+        </tab-content>
         </form-wizard>
  </div>
 </div>
@@ -82,9 +48,21 @@
 </template>
 
 <script>
+import CheckingDetails from './components/steps/CheckingDetails.vue'
 import PersonalInformation from './components/steps/PersonalInformation.vue'
+import RelationshipStatus from './components/steps/RelationshipStatus.vue'
+import ResidentialDetails from './components/steps/ResidentialDetails.vue'
+import RetirementDetails from './components/steps/RetirementDetails.vue'
+import SavingsDetails from './components/steps/SavingsDetails.vue'
 export default {
-  components: { PersonalInformation },
+  components: { 
+    PersonalInformation,
+    RelationshipStatus,
+    ResidentialDetails,
+    CheckingDetails,
+    SavingsDetails,
+    RetirementDetails 
+    },
   name: 'App'
 }
 </script>
